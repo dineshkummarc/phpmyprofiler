@@ -77,12 +77,12 @@ function dbconnect($dieonerror = true) {
 	global $pmp_sqlhost, $pmp_sqluser, $pmp_sqlpass, $pmp_sqldatabase;
 	global $pmp_timezone, $pmp_mysql_ver;
 
-	$db = @mysql_connect($pmp_sqlhost, $pmp_sqluser, $pmp_sqlpass);
+	$db = @($GLOBALS["___mysqli_ston"] = mysqli_connect($pmp_sqlhost,  $pmp_sqluser,  $pmp_sqlpass));
 
 	// Can't connect to the mysql-database
 	if (!$db && $dieonerror) {
-		$the_error = "\nmySQL error: " . mysql_error() . "\n";
-		$the_error .= "mySQL error code: " . mysql_errno() . "\n";
+		$the_error = "\nmySQL error: " . mysqli_error($GLOBALS["___mysqli_ston"]) . "\n";
+		$the_error .= "mysql error code: " . mysqli_errno($GLOBALS["___mysqli_ston"]) . "\n";
 		$the_error .= "Date: " . date("Y-m-d H:i:s");
 		echo "<html><head><title>Database Error</title><style>P,BODY{ font-family:arial,sans-serif; font-size:11px; }</style>
 			</head><body>&nbsp;<br><br><blockquote><b>There appears to be an error with the database.</b>
@@ -93,19 +93,19 @@ function dbconnect($dieonerror = true) {
 		exit();
 	}
 
-	// Get MySQL Server version
-	$pmp_mysql_ver = substr(@mysql_get_server_info($db), 0, strpos(@mysql_get_server_info($db), "-"));
+	// Get mysql Server version
+	$pmp_mysql_ver = substr(@((is_null($___mysqli_res = mysqli_get_server_info($db))) ? false : $___mysqli_res), 0, strpos(@((is_null($___mysqli_res = mysqli_get_server_info($db))) ? false : $___mysqli_res), "-"));
 
 	// Set encoding for database
-	@mysql_set_charset('utf8', $db);
-	@mysql_query("SET time_zone='".$pmp_timezone."'");
+	@((bool)mysqli_set_charset( $db, "utf8"));
+	@mysqli_query($GLOBALS["___mysqli_ston"], "SET time_zone='".$pmp_timezone."'");
 
-	$db_select = @mysql_select_db($pmp_sqldatabase);
+	$db_select = @mysqli_select_db($GLOBALS["___mysqli_ston"], $pmp_sqldatabase);
 
 	// Can't switch to the database
 	if (!$db_select && $dieonerror) {
-		$the_error .= "\nmySQL error: ".mysql_error()."\n";
-		$the_error .= "mySQL error code: ".mysql_errno()."\n";
+		$the_error .= "\nmySQL error: ".mysqli_error($GLOBALS["___mysqli_ston"])."\n";
+		$the_error .= "mysql error code: ".mysqli_errno($GLOBALS["___mysqli_ston"])."\n";
 		$the_error .= "Date: ".date("Y-m-d H:i:s");
 		echo "<html><head><title>Database Error</title><style>P,BODY{ font-family:arial,sans-serif; font-size:11px; }</style>
 			</head><body>&nbsp;<br><br><blockquote><b>There appears to be an error with the database.</b>
@@ -163,11 +163,11 @@ function dbconnect_pdo($dieonerror = true) {
 // If $continueonerror is set to true the script will abort with an error message if the query fails.
 function dbexec($sql, $continueonerror = false) {
 	$sql = replace_table_prefix($sql);
-	$result = @mysql_query($sql);
+	$result = @mysqli_query($GLOBALS["___mysqli_ston"], $sql);
 
 	if (!$continueonerror) {
 		if (!$result) {
-			echo "<strong>SQL-Statement failed:</strong><br /><pre>" . mysql_errno() . " - " . mysql_error()
+			echo "<strong>SQL-Statement failed:</strong><br /><pre>" . mysqli_errno($GLOBALS["___mysqli_ston"]) . " - " . mysqli_error($GLOBALS["___mysqli_ston"])
 				. "\n\nQuery:\n$sql</pre>";
 			die;
 		}
@@ -246,7 +246,7 @@ function dbexecute_pdo($query, $params = null, $continueonerror = false) {
 
 // Close database
 function dbclose() {
-	mysql_close();
+	((is_null($___mysqli_res = mysqli_close($GLOBALS["___mysqli_ston"]))) ? false : $___mysqli_res);
 }
 
 // Close database
