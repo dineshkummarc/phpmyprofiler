@@ -116,7 +116,7 @@ header('Content-type: text/html; charset=utf-8');
 					<td style="width: 150px"><?php check_phpversion(); ?></td>
 				    </tr>
 				    <tr>
-					<td>&nbsp; - PDO MySQL Support</td>
+					<td>&nbsp; - PDO mysql Support</td>
 					<td style="width: 150px"><?php check_extension('pdo_mysql'); ?></td>
 				    </tr>
 				    <tr>
