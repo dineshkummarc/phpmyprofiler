@@ -61,7 +61,7 @@ if (!empty($action) && $action == 'save') {
             $pmp_db = new PDO("mysql:host={$pmp_sqlhost}", $pmp_sqluser, $pmp_sqlpass);
 	}
 	catch (PDOException $e) {
-	    $error = t('Wrong access data for MySQL Database.');
+	    $error = t('Wrong access data for mysql Database.');
 	}
 
 	if ($error === false) {
@@ -142,7 +142,7 @@ header('Content-type: text/html; charset=utf-8');
 			    <tr><td colspan="3">&nbsp;</td></tr>
 
 			    <tr>
-				<td valign="top" align="left" style="padding-left: 5px; width: 200px"><?php echo t('Please enter the access data to the MySQL database.'); ?></td>
+				<td valign="top" align="left" style="padding-left: 5px; width: 200px"><?php echo t('Please enter the access data to the mysql database.'); ?></td>
 				<td style="width: 3px">&nbsp;</td>
 				<td>
 				    <table cellpadding="3" cellspacing="0" border="0" width="100%" class="maintests">
