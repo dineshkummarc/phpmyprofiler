@@ -1,6 +1,6 @@
 <?php
 /* phpMyProfiler
- * Copyright (C) 2005-2014 The phpMyProfiler project
+ * Copyright (C) 2005-2015 The phpMyProfiler project
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -9,7 +9,7 @@
  *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
@@ -38,41 +38,42 @@ $smarty->compile_dir = '../templates_c';
 
 $smarty->assign('nologout', true);
 $smarty->assign('Focus', 'user');
-$smarty->assign('session', session_name() . "=" . session_id());
+$smarty->assign('session', session_name() . '=' . session_id());
 $smarty->assign('formkey', $formKey->outputKey());
 
 // Logout
-if ( isset($_POST['logout']) ) {
-	$_SESSION['isadmin'] = '';
+if (isset($_POST['logout'])) {
+	unset($_SESSION['isadmin']);
+	session_destroy();
 	$_SESSION['lastside'] = 'index.php';
 }
 
 // Check Login (User / Password)
-if( (isset($_GET['error'])) && ($_GET['error'] == "formkey") ) {
+if (isset($_GET['error']) && $_GET['error'] == 'formkey') {
 	//Form key is invalid, show an error
 	$smarty->assign('Error', 'Form key error!');
 }
-else if ( (isset($_GET['error'])) && ($_GET['error'] == "user") ) {
+else if (isset($_GET['error']) && $_GET['error'] == 'user') {
 	$smarty->assign('Error', t('You must enter a username.'));
 }
-else if ( (isset($_GET['error'])) && ($_GET['error'] == "pass") ) {
+else if (isset($_GET['error']) && $_GET['error'] == 'pass') {
 	$smarty->assign('Error', t('You must enter a password.'));
 	$smarty->assign('Username', $_GET['user']);
 	$smarty->assign('Focus', 'passwd');
 }
-else if ( (isset($_GET['error'])) && ($_GET['error'] == "usrpsw") ) {
+else if (isset($_GET['error']) && $_GET['error'] == 'usrpsw') {
 	$smarty->assign('Error', t('The username or the password is wrong.'));
 }
 
-if ( (!empty($pmp_admin)) && (!empty($pmp_passwd)) ) {
-	if ( empty($_SESSION['isadmin']) ) {
+if (!empty($pmp_admin) && !empty($pmp_passwd)) {
+	if (empty($_SESSION['isadmin'])) {
 		$smarty->display('admin/login.tpl');
 	}
 }
 else {
 	saveLastIP();
-	session_regenerate_id(false);
-	$smarty->assign('session', session_name() . "=" . session_id() );
+	session_regenerate_id(true);
+	$smarty->assign('session', session_name() . '=' . session_id() );
 
 	// Without a Passwort everybody can administrate phpMyProfiler!
 	$_SESSION['isadmin'] = true;
