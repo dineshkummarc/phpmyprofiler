@@ -101,8 +101,8 @@ function buildBanners() {
 		if ( isset($pmp_banner_name) && $pmp_banner_name != '') {
 			$sql = "SELECT user_id FROM pmp_users WHERE CONCAT(firstname,' ',lastname) = '" . $pmp_banner_name . "'";
 			$res = dbexec($sql);
-			if ( mysql_num_rows($res) > 0 ) {
-				$row = mysql_fetch_object($res);
+			if ( mysqli_num_rows($res) > 0 ) {
+				$row = mysqli_fetch_object($res);
 				$sql = "SELECT id FROM pmp_events WHERE EventType = 'Watched' AND user_id = " . $row->user_id . " ORDER BY Timestamp DESC LIMIT 0,10";
 			} else {
 				$sql = "SELECT id FROM pmp_events WHERE EventType = 'Watched' ORDER BY Timestamp DESC LIMIT 0,10";
@@ -127,13 +127,13 @@ function buildBanner($sql, $title, $prefix) {
 
 	// Getting info from database
 	$result = dbexec($sql);
-	$rows = mysql_num_rows($result);
+	$rows = mysqli_num_rows($result);
 
 	// Creating thumbs
 	if ( $rows == 0 ) {
 		return false;
 	} else {
-		while ($row = mysql_fetch_object($result)) {
+		while ($row = mysqli_fetch_object($result)) {
 			$file = thumb($row->id);
 			$thumb[] = imagecreatefrompng($file);
 			unlink($file);
