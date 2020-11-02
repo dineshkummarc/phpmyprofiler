@@ -69,8 +69,8 @@ $sql.="FROM pmp_events INNER JOIN pmp_film ON pmp_events.id = pmp_film.id LEFT J
 $sql.="WHERE eventtype = 'Watched'";
 $sql.="GROUP BY lastname, firstname ORDER BY cnt DESC";
 $res = dbexec($sql);
-if (mysql_num_rows($res) > 0) {
-	while($row = mysql_fetch_object($res)) {
+if (mysqli_num_rows($res) > 0) {
+	while($row = mysqli_fetch_object($res)) {
 		$row->avg = ceil($row->avg);
 		$row = getTime($row);
 		$persons[] = $row;  
@@ -83,8 +83,8 @@ $sql.="FROM pmp_events INNER JOIN pmp_film ON pmp_events.id = pmp_film.id LEFT J
 $sql.="WHERE eventtype = 'Watched' AND firstname = '$fn' AND lastname = '$ln'";
 $sql.="GROUP BY substring(timestamp,1,4) ORDER BY year DESC";
 $res = dbexec($sql);
-if (mysql_num_rows($res) > 0) {
-	while($row = mysql_fetch_object($res)) {
+if (mysqli_num_rows($res) > 0) {
+	while($row = mysqli_fetch_object($res)) {
 		$row->avg = ceil($row->avg);
 		$row = getTime($row);
 		$years[] = $row;
@@ -97,8 +97,8 @@ $sql.="FROM pmp_events INNER JOIN pmp_film ON pmp_events.id = pmp_film.id LEFT J
 $sql.="WHERE eventtype = 'Watched' AND firstname = '$fn' AND lastname = '$ln' AND substring(timestamp,1,4) = '$year'";
 $sql.="GROUP BY substring(timestamp,6,2) ORDER BY month DESC";
 $res = dbexec($sql);
-if (mysql_num_rows($res) > 0) {
-	while($row = mysql_fetch_object($res)) {
+if (mysqli_num_rows($res) > 0) {
+	while($row = mysqli_fetch_object($res)) {
 		if ($row->month != "10") {
 			$row->monthname = str_replace("0", "", $row->month);
 		} else {
@@ -117,8 +117,8 @@ $sql.="FROM pmp_events INNER JOIN pmp_film ON pmp_events.id = pmp_film.id LEFT J
 $sql.="WHERE eventtype = 'Watched' AND firstname = '$fn' AND lastname = '$ln' AND substring(timestamp,1,4) = '$year' AND substring(timestamp,6,2) = '$month' ";
 $sql.="ORDER BY " . $w_orderby . " " . $w_orderdir;
 $res = dbexec($sql);
-if (mysql_num_rows($res) > 0) {
-	while($row = mysql_fetch_object($res)) {
+if (mysqli_num_rows($res) > 0) {
+	while($row = mysqli_fetch_object($res)) {
 		$row->date = $row->day . "." . $row->month . "." . $row->year;
 		$movies[] = $row;
 	}  
@@ -129,8 +129,8 @@ $sql ="SELECT SUM(runningtime) AS time, COUNT(*) AS cnt, (SUM(runningtime)/COUNT
 $sql.="FROM pmp_events INNER JOIN pmp_film ON pmp_events.id = pmp_film.id ";
 $sql.="WHERE eventtype = 'Watched'";
 $res = dbexec($sql);
-if (mysql_num_rows($res) > 0) {
-	while($row = mysql_fetch_object($res)) {
+if (mysqli_num_rows($res) > 0) {
+	while($row = mysqli_fetch_object($res)) {
 		$row->avg = ceil($row->avg);
 		$row = getTime($row);
 		$results[] = $row;
