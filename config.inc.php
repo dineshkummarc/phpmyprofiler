@@ -1,5 +1,5 @@
 <?php 
-// Generated: Wed, 09 Dec 2009 10:48:18 +0100
+// Generated: Mon, 02 Nov 2020 07:37:09 +0100
 
 
 
@@ -12,7 +12,7 @@ $pmp_sqlhost = 'localhost';
 
 // Database user
 // 
-$pmp_sqluser = '';
+$pmp_sqluser = 'root';
 
 // Database password
 // 
@@ -20,7 +20,7 @@ $pmp_sqlpass = '';
 
 // Database name
 // 
-$pmp_sqldatabase = '';
+$pmp_sqldatabase = 'phpmyprofiler';
 
 // Table prefix
 // 
@@ -126,7 +126,7 @@ $pmp_admin_cnt = '';
 //    no => Norwegian
 //    nl => Dutch
 // 
-$pmp_lang_default = 'de';
+$pmp_lang_default = 'en';
 
 // Date format
 // 
@@ -141,39 +141,40 @@ $pmp_dateformat = '%d.%m.%Y';
 // 
 // Possible values:
 //    EUR => EUR
-//    AUD => AUD
+//    USD => USD
+//    JPY => JPY
 //    BGN => BGN
-//    BRL => BRL
-//    CAD => CAD
-//    CHF => CHF
-//    CNY => CNY
 //    CZK => CZK
 //    DKK => DKK
 //    EEK => EEK
 //    GBP => GBP
-//    HKD => HKD
-//    HRK => HRK
 //    HUF => HUF
-//    IDR => IDR
-//    INR => INR
-//    JPY => JPY
-//    KRW => KRW
 //    LTL => LTL
 //    LVL => LVL
-//    MXN => MXN
-//    MYR => MYR
-//    NOK => NOK
-//    NZD => NZD
-//    PHP => PHP
 //    PLN => PLN
 //    RON => RON
-//    RUB => RUB
 //    SEK => SEK
+//    CHF => CHF
+//    NOK => NOK
+//    HRK => HRK
+//    RUB => RUB
+//    TRY => TRY
+//    AUD => AUD
+//    BRL => BRL
+//    CAD => CAD
+//    CNY => CNY
+//    HKD => HKD
+//    IDR => IDR
+//    INR => INR
+//    KRW => KRW
+//    MXN => MXN
+//    MYR => MYR
+//    NZD => NZD
+//    PHP => PHP
 //    SGD => SGD
 //    THB => THB
-//    TRY => TRY
-//    USD => USD
 //    ZAR => ZAR
+//    ISK => ISK
 // 
 $pmp_usecurrency = 'EUR';
 
@@ -201,7 +202,6 @@ $pmp_thousands_sep = '.';
 //    Africa/Addis_Ababa => Africa/Addis Ababa
 //    Africa/Algiers => Africa/Algiers
 //    Africa/Asmara => Africa/Asmara
-//    Africa/Asmera => Africa/Asmera
 //    Africa/Bamako => Africa/Bamako
 //    Africa/Bangui => Africa/Bangui
 //    Africa/Banjul => Africa/Banjul
@@ -222,6 +222,7 @@ $pmp_thousands_sep = '.';
 //    Africa/Gaborone => Africa/Gaborone
 //    Africa/Harare => Africa/Harare
 //    Africa/Johannesburg => Africa/Johannesburg
+//    Africa/Juba => Africa/Juba
 //    Africa/Kampala => Africa/Kampala
 //    Africa/Khartoum => Africa/Khartoum
 //    Africa/Kigali => Africa/Kigali
@@ -245,7 +246,6 @@ $pmp_thousands_sep = '.';
 //    Africa/Ouagadougou => Africa/Ouagadougou
 //    Africa/Porto-Novo => Africa/Porto-Novo
 //    Africa/Sao_Tome => Africa/Sao Tome
-//    Africa/Timbuktu => Africa/Timbuktu
 //    Africa/Tripoli => Africa/Tripoli
 //    Africa/Tunis => Africa/Tunis
 //    Africa/Windhoek => Africa/Windhoek
@@ -258,8 +258,8 @@ $pmp_thousands_sep = '.';
 //    America/Aruba => America/Aruba
 //    America/Asuncion => America/Asuncion
 //    America/Atikokan => America/Atikokan
-//    America/Atka => America/Atka
 //    America/Bahia => America/Bahia
+//    America/Bahia_Banderas => America/Bahia Banderas
 //    America/Barbados => America/Barbados
 //    America/Belem => America/Belem
 //    America/Belize => America/Belize
@@ -267,19 +267,16 @@ $pmp_thousands_sep = '.';
 //    America/Boa_Vista => America/Boa Vista
 //    America/Bogota => America/Bogota
 //    America/Boise => America/Boise
-//    America/Buenos_Aires => America/Buenos Aires
 //    America/Cambridge_Bay => America/Cambridge Bay
 //    America/Campo_Grande => America/Campo Grande
 //    America/Cancun => America/Cancun
 //    America/Caracas => America/Caracas
-//    America/Catamarca => America/Catamarca
 //    America/Cayenne => America/Cayenne
 //    America/Cayman => America/Cayman
 //    America/Chicago => America/Chicago
 //    America/Chihuahua => America/Chihuahua
-//    America/Coral_Harbour => America/Coral Harbour
-//    America/Cordoba => America/Cordoba
 //    America/Costa_Rica => America/Costa Rica
+//    America/Creston => America/Creston
 //    America/Cuiaba => America/Cuiaba
 //    America/Curacao => America/Curacao
 //    America/Danmarkshavn => America/Danmarkshavn
@@ -291,8 +288,7 @@ $pmp_thousands_sep = '.';
 //    America/Edmonton => America/Edmonton
 //    America/Eirunepe => America/Eirunepe
 //    America/El_Salvador => America/El Salvador
-//    America/Ensenada => America/Ensenada
-//    America/Fort_Wayne => America/Fort Wayne
+//    America/Fort_Nelson => America/Fort Nelson
 //    America/Fortaleza => America/Fortaleza
 //    America/Glace_Bay => America/Glace Bay
 //    America/Godthab => America/Godthab
@@ -307,33 +303,31 @@ $pmp_thousands_sep = '.';
 //    America/Havana => America/Havana
 //    America/Hermosillo => America/Hermosillo
 //    America/Indiana => America/Indiana
-//    America/Indianapolis => America/Indianapolis
 //    America/Inuvik => America/Inuvik
 //    America/Iqaluit => America/Iqaluit
 //    America/Jamaica => America/Jamaica
-//    America/Jujuy => America/Jujuy
 //    America/Juneau => America/Juneau
 //    America/Kentucky => America/Kentucky
-//    America/Knox_IN => America/Knox IN
+//    America/Kralendijk => America/Kralendijk
 //    America/La_Paz => America/La Paz
 //    America/Lima => America/Lima
 //    America/Los_Angeles => America/Los Angeles
-//    America/Louisville => America/Louisville
+//    America/Lower_Princes => America/Lower Princes
 //    America/Maceio => America/Maceio
 //    America/Managua => America/Managua
 //    America/Manaus => America/Manaus
 //    America/Marigot => America/Marigot
 //    America/Martinique => America/Martinique
+//    America/Matamoros => America/Matamoros
 //    America/Mazatlan => America/Mazatlan
-//    America/Mendoza => America/Mendoza
 //    America/Menominee => America/Menominee
 //    America/Merida => America/Merida
+//    America/Metlakatla => America/Metlakatla
 //    America/Mexico_City => America/Mexico City
 //    America/Miquelon => America/Miquelon
 //    America/Moncton => America/Moncton
 //    America/Monterrey => America/Monterrey
 //    America/Montevideo => America/Montevideo
-//    America/Montreal => America/Montreal
 //    America/Montserrat => America/Montserrat
 //    America/Nassau => America/Nassau
 //    America/New_York => America/New York
@@ -341,28 +335,28 @@ $pmp_thousands_sep = '.';
 //    America/Nome => America/Nome
 //    America/Noronha => America/Noronha
 //    America/North_Dakota => America/North Dakota
+//    America/Ojinaga => America/Ojinaga
 //    America/Panama => America/Panama
 //    America/Pangnirtung => America/Pangnirtung
 //    America/Paramaribo => America/Paramaribo
 //    America/Phoenix => America/Phoenix
 //    America/Port-au-Prince => America/Port-au-Prince
 //    America/Port_of_Spain => America/Port of Spain
-//    America/Porto_Acre => America/Porto Acre
 //    America/Porto_Velho => America/Porto Velho
 //    America/Puerto_Rico => America/Puerto Rico
+//    America/Punta_Arenas => America/Punta Arenas
 //    America/Rainy_River => America/Rainy River
 //    America/Rankin_Inlet => America/Rankin Inlet
 //    America/Recife => America/Recife
 //    America/Regina => America/Regina
 //    America/Resolute => America/Resolute
 //    America/Rio_Branco => America/Rio Branco
-//    America/Rosario => America/Rosario
 //    America/Santarem => America/Santarem
 //    America/Santiago => America/Santiago
 //    America/Santo_Domingo => America/Santo Domingo
 //    America/Sao_Paulo => America/Sao Paulo
 //    America/Scoresbysund => America/Scoresbysund
-//    America/Shiprock => America/Shiprock
+//    America/Sitka => America/Sitka
 //    America/St_Barthelemy => America/St Barthelemy
 //    America/St_Johns => America/St Johns
 //    America/St_Kitts => America/St Kitts
@@ -377,7 +371,6 @@ $pmp_thousands_sep = '.';
 //    America/Toronto => America/Toronto
 //    America/Tortola => America/Tortola
 //    America/Vancouver => America/Vancouver
-//    America/Virgin => America/Virgin
 //    America/Whitehorse => America/Whitehorse
 //    America/Winnipeg => America/Winnipeg
 //    America/Yakutat => America/Yakutat
@@ -385,12 +378,13 @@ $pmp_thousands_sep = '.';
 //    Antarctica/Casey => Antarctica/Casey
 //    Antarctica/Davis => Antarctica/Davis
 //    Antarctica/DumontDUrville => Antarctica/DumontDUrville
+//    Antarctica/Macquarie => Antarctica/Macquarie
 //    Antarctica/Mawson => Antarctica/Mawson
 //    Antarctica/McMurdo => Antarctica/McMurdo
 //    Antarctica/Palmer => Antarctica/Palmer
 //    Antarctica/Rothera => Antarctica/Rothera
-//    Antarctica/South_Pole => Antarctica/South Pole
 //    Antarctica/Syowa => Antarctica/Syowa
+//    Antarctica/Troll => Antarctica/Troll
 //    Antarctica/Vostok => Antarctica/Vostok
 //    Arctic/Longyearbyen => Arctic/Longyearbyen
 //    Asia/Aden => Asia/Aden
@@ -400,53 +394,50 @@ $pmp_thousands_sep = '.';
 //    Asia/Aqtau => Asia/Aqtau
 //    Asia/Aqtobe => Asia/Aqtobe
 //    Asia/Ashgabat => Asia/Ashgabat
-//    Asia/Ashkhabad => Asia/Ashkhabad
+//    Asia/Atyrau => Asia/Atyrau
 //    Asia/Baghdad => Asia/Baghdad
 //    Asia/Bahrain => Asia/Bahrain
 //    Asia/Baku => Asia/Baku
 //    Asia/Bangkok => Asia/Bangkok
+//    Asia/Barnaul => Asia/Barnaul
 //    Asia/Beirut => Asia/Beirut
 //    Asia/Bishkek => Asia/Bishkek
 //    Asia/Brunei => Asia/Brunei
-//    Asia/Calcutta => Asia/Calcutta
+//    Asia/Chita => Asia/Chita
 //    Asia/Choibalsan => Asia/Choibalsan
-//    Asia/Chongqing => Asia/Chongqing
-//    Asia/Chungking => Asia/Chungking
 //    Asia/Colombo => Asia/Colombo
-//    Asia/Dacca => Asia/Dacca
 //    Asia/Damascus => Asia/Damascus
 //    Asia/Dhaka => Asia/Dhaka
 //    Asia/Dili => Asia/Dili
 //    Asia/Dubai => Asia/Dubai
 //    Asia/Dushanbe => Asia/Dushanbe
+//    Asia/Famagusta => Asia/Famagusta
 //    Asia/Gaza => Asia/Gaza
-//    Asia/Harbin => Asia/Harbin
+//    Asia/Hebron => Asia/Hebron
 //    Asia/Ho_Chi_Minh => Asia/Ho Chi Minh
 //    Asia/Hong_Kong => Asia/Hong Kong
 //    Asia/Hovd => Asia/Hovd
 //    Asia/Irkutsk => Asia/Irkutsk
-//    Asia/Istanbul => Asia/Istanbul
 //    Asia/Jakarta => Asia/Jakarta
 //    Asia/Jayapura => Asia/Jayapura
 //    Asia/Jerusalem => Asia/Jerusalem
 //    Asia/Kabul => Asia/Kabul
 //    Asia/Kamchatka => Asia/Kamchatka
 //    Asia/Karachi => Asia/Karachi
-//    Asia/Kashgar => Asia/Kashgar
 //    Asia/Kathmandu => Asia/Kathmandu
-//    Asia/Katmandu => Asia/Katmandu
+//    Asia/Khandyga => Asia/Khandyga
 //    Asia/Kolkata => Asia/Kolkata
 //    Asia/Krasnoyarsk => Asia/Krasnoyarsk
 //    Asia/Kuala_Lumpur => Asia/Kuala Lumpur
 //    Asia/Kuching => Asia/Kuching
 //    Asia/Kuwait => Asia/Kuwait
-//    Asia/Macao => Asia/Macao
 //    Asia/Macau => Asia/Macau
 //    Asia/Magadan => Asia/Magadan
 //    Asia/Makassar => Asia/Makassar
 //    Asia/Manila => Asia/Manila
 //    Asia/Muscat => Asia/Muscat
 //    Asia/Nicosia => Asia/Nicosia
+//    Asia/Novokuznetsk => Asia/Novokuznetsk
 //    Asia/Novosibirsk => Asia/Novosibirsk
 //    Asia/Omsk => Asia/Omsk
 //    Asia/Oral => Asia/Oral
@@ -455,76 +446,62 @@ $pmp_thousands_sep = '.';
 //    Asia/Pyongyang => Asia/Pyongyang
 //    Asia/Qatar => Asia/Qatar
 //    Asia/Qyzylorda => Asia/Qyzylorda
-//    Asia/Rangoon => Asia/Rangoon
 //    Asia/Riyadh => Asia/Riyadh
-//    Asia/Saigon => Asia/Saigon
 //    Asia/Sakhalin => Asia/Sakhalin
 //    Asia/Samarkand => Asia/Samarkand
 //    Asia/Seoul => Asia/Seoul
 //    Asia/Shanghai => Asia/Shanghai
 //    Asia/Singapore => Asia/Singapore
+//    Asia/Srednekolymsk => Asia/Srednekolymsk
 //    Asia/Taipei => Asia/Taipei
 //    Asia/Tashkent => Asia/Tashkent
 //    Asia/Tbilisi => Asia/Tbilisi
 //    Asia/Tehran => Asia/Tehran
-//    Asia/Tel_Aviv => Asia/Tel Aviv
-//    Asia/Thimbu => Asia/Thimbu
 //    Asia/Thimphu => Asia/Thimphu
 //    Asia/Tokyo => Asia/Tokyo
-//    Asia/Ujung_Pandang => Asia/Ujung Pandang
+//    Asia/Tomsk => Asia/Tomsk
 //    Asia/Ulaanbaatar => Asia/Ulaanbaatar
-//    Asia/Ulan_Bator => Asia/Ulan Bator
 //    Asia/Urumqi => Asia/Urumqi
+//    Asia/Ust-Nera => Asia/Ust-Nera
 //    Asia/Vientiane => Asia/Vientiane
 //    Asia/Vladivostok => Asia/Vladivostok
 //    Asia/Yakutsk => Asia/Yakutsk
+//    Asia/Yangon => Asia/Yangon
 //    Asia/Yekaterinburg => Asia/Yekaterinburg
 //    Asia/Yerevan => Asia/Yerevan
 //    Atlantic/Azores => Atlantic/Azores
 //    Atlantic/Bermuda => Atlantic/Bermuda
 //    Atlantic/Canary => Atlantic/Canary
 //    Atlantic/Cape_Verde => Atlantic/Cape Verde
-//    Atlantic/Faeroe => Atlantic/Faeroe
 //    Atlantic/Faroe => Atlantic/Faroe
-//    Atlantic/Jan_Mayen => Atlantic/Jan Mayen
 //    Atlantic/Madeira => Atlantic/Madeira
 //    Atlantic/Reykjavik => Atlantic/Reykjavik
 //    Atlantic/South_Georgia => Atlantic/South Georgia
 //    Atlantic/St_Helena => Atlantic/St Helena
 //    Atlantic/Stanley => Atlantic/Stanley
-//    Australia/ACT => Australia/ACT
 //    Australia/Adelaide => Australia/Adelaide
 //    Australia/Brisbane => Australia/Brisbane
 //    Australia/Broken_Hill => Australia/Broken Hill
-//    Australia/Canberra => Australia/Canberra
 //    Australia/Currie => Australia/Currie
 //    Australia/Darwin => Australia/Darwin
 //    Australia/Eucla => Australia/Eucla
 //    Australia/Hobart => Australia/Hobart
-//    Australia/LHI => Australia/LHI
 //    Australia/Lindeman => Australia/Lindeman
 //    Australia/Lord_Howe => Australia/Lord Howe
 //    Australia/Melbourne => Australia/Melbourne
-//    Australia/North => Australia/North
-//    Australia/NSW => Australia/NSW
 //    Australia/Perth => Australia/Perth
-//    Australia/Queensland => Australia/Queensland
-//    Australia/South => Australia/South
 //    Australia/Sydney => Australia/Sydney
-//    Australia/Tasmania => Australia/Tasmania
-//    Australia/Victoria => Australia/Victoria
-//    Australia/West => Australia/West
-//    Australia/Yancowinna => Australia/Yancowinna
 //    Europe/Amsterdam => Europe/Amsterdam
 //    Europe/Andorra => Europe/Andorra
+//    Europe/Astrakhan => Europe/Astrakhan
 //    Europe/Athens => Europe/Athens
-//    Europe/Belfast => Europe/Belfast
 //    Europe/Belgrade => Europe/Belgrade
 //    Europe/Berlin => Europe/Berlin
 //    Europe/Bratislava => Europe/Bratislava
 //    Europe/Brussels => Europe/Brussels
 //    Europe/Bucharest => Europe/Bucharest
 //    Europe/Budapest => Europe/Budapest
+//    Europe/Busingen => Europe/Busingen
 //    Europe/Chisinau => Europe/Chisinau
 //    Europe/Copenhagen => Europe/Copenhagen
 //    Europe/Dublin => Europe/Dublin
@@ -536,6 +513,7 @@ $pmp_thousands_sep = '.';
 //    Europe/Jersey => Europe/Jersey
 //    Europe/Kaliningrad => Europe/Kaliningrad
 //    Europe/Kiev => Europe/Kiev
+//    Europe/Kirov => Europe/Kirov
 //    Europe/Lisbon => Europe/Lisbon
 //    Europe/Ljubljana => Europe/Ljubljana
 //    Europe/London => Europe/London
@@ -546,7 +524,6 @@ $pmp_thousands_sep = '.';
 //    Europe/Minsk => Europe/Minsk
 //    Europe/Monaco => Europe/Monaco
 //    Europe/Moscow => Europe/Moscow
-//    Europe/Nicosia => Europe/Nicosia
 //    Europe/Oslo => Europe/Oslo
 //    Europe/Paris => Europe/Paris
 //    Europe/Podgorica => Europe/Podgorica
@@ -556,13 +533,14 @@ $pmp_thousands_sep = '.';
 //    Europe/Samara => Europe/Samara
 //    Europe/San_Marino => Europe/San Marino
 //    Europe/Sarajevo => Europe/Sarajevo
+//    Europe/Saratov => Europe/Saratov
 //    Europe/Simferopol => Europe/Simferopol
 //    Europe/Skopje => Europe/Skopje
 //    Europe/Sofia => Europe/Sofia
 //    Europe/Stockholm => Europe/Stockholm
 //    Europe/Tallinn => Europe/Tallinn
 //    Europe/Tirane => Europe/Tirane
-//    Europe/Tiraspol => Europe/Tiraspol
+//    Europe/Ulyanovsk => Europe/Ulyanovsk
 //    Europe/Uzhgorod => Europe/Uzhgorod
 //    Europe/Vaduz => Europe/Vaduz
 //    Europe/Vatican => Europe/Vatican
@@ -586,7 +564,9 @@ $pmp_thousands_sep = '.';
 //    Indian/Reunion => Indian/Reunion
 //    Pacific/Apia => Pacific/Apia
 //    Pacific/Auckland => Pacific/Auckland
+//    Pacific/Bougainville => Pacific/Bougainville
 //    Pacific/Chatham => Pacific/Chatham
+//    Pacific/Chuuk => Pacific/Chuuk
 //    Pacific/Easter => Pacific/Easter
 //    Pacific/Efate => Pacific/Efate
 //    Pacific/Enderbury => Pacific/Enderbury
@@ -598,7 +578,6 @@ $pmp_thousands_sep = '.';
 //    Pacific/Guadalcanal => Pacific/Guadalcanal
 //    Pacific/Guam => Pacific/Guam
 //    Pacific/Honolulu => Pacific/Honolulu
-//    Pacific/Johnston => Pacific/Johnston
 //    Pacific/Kiritimati => Pacific/Kiritimati
 //    Pacific/Kosrae => Pacific/Kosrae
 //    Pacific/Kwajalein => Pacific/Kwajalein
@@ -612,18 +591,15 @@ $pmp_thousands_sep = '.';
 //    Pacific/Pago_Pago => Pacific/Pago Pago
 //    Pacific/Palau => Pacific/Palau
 //    Pacific/Pitcairn => Pacific/Pitcairn
-//    Pacific/Ponape => Pacific/Ponape
+//    Pacific/Pohnpei => Pacific/Pohnpei
 //    Pacific/Port_Moresby => Pacific/Port Moresby
 //    Pacific/Rarotonga => Pacific/Rarotonga
 //    Pacific/Saipan => Pacific/Saipan
-//    Pacific/Samoa => Pacific/Samoa
 //    Pacific/Tahiti => Pacific/Tahiti
 //    Pacific/Tarawa => Pacific/Tarawa
 //    Pacific/Tongatapu => Pacific/Tongatapu
-//    Pacific/Truk => Pacific/Truk
 //    Pacific/Wake => Pacific/Wake
 //    Pacific/Wallis => Pacific/Wallis
-//    Pacific/Yap => Pacific/Yap
 // 
 $pmp_timezone = 'Europe/Berlin';
 
@@ -653,7 +629,7 @@ $pmp_splitxmlafter = 100;
 // 
 // This will create banners for the last ten added and/or watched movies.
 // 
-// Mögliche Werte:
+// Possible values:
 //    0 => No banner
 //    1 => Last added banner only
 //    2 => Last watched banner only
@@ -703,13 +679,13 @@ $pmp_thumbnail_cache = 1;
 $pmp_stat_use_ttf = 1;
 
 // Show HD banner
-//
+// 
 // Will only work if GD-Libs are enabled
-//
+// 
 // Possible values:
 //    0 => No
 //    1 => Yes
-//
+// 
 $pmp_hdbanner = 1;
 
 
@@ -727,9 +703,9 @@ $pmp_theme = 'default';
 // Theme CSS
 // 
 // Possible values:
+//    black.css => black.css
 //    default.css => default.css
 //    red.css => red.css
-//    black.css => black.css
 // 
 $pmp_theme_css = 'default.css';
 
@@ -778,35 +754,35 @@ $pmp_people_per_page = 80;
 $pmp_events_showtime = 1;
 
 // Disable newsarchive
-//
+// 
 // Possible values:
 //    0 => No
 //    1 => Yes
-//
+// 
 $pmp_disable_newsarchive = 0;
 
 // Disable guestbook
-//
+// 
 // Possible values:
 //    0 => No
 //    1 => Yes
-//
+// 
 $pmp_disable_guestbook = 0;
 
 // Disable contact
-//
+// 
 // Possible values:
 //    0 => No
 //    1 => Yes
-//
+// 
 $pmp_disable_contact = 0;
 
 // Disable phpMyProfiler website and forum links
-//
+// 
 // Possible values:
 //    0 => No
 //    1 => Yes
-//
+// 
 $pmp_disable_links = 0;
 
 
@@ -815,81 +791,81 @@ $pmp_disable_links = 0;
 // =============================
 
 // Show media type before title
-//
+// 
 // Possible values:
 //    0 => No
 //    1 => Yes
-//
+// 
 $pmp_show_mediatype = 1;
 
 // Exclude tag
-//
+// 
 // Don't show media with this selected tag
-//
+// 
 // Possible values:
 //     => empty
-//
+// 
 $pmp_exclude_tag = '';
 
 // Use HTML-Code in notices
-//
+// 
 // Possible values:
 //    0 => No
 //    1 => Yes
-//
+// 
 $pmp_html_notes = 1;
 
 // Type of review
-//
+// 
 // Possible values:
 //    0 => Default (Movie, DVD)
 //    1 => Simple (Movie)
 //    2 => Detailed (Movie, Video, Audio, Extras)
 //    3 => Deactivated
-//
+// 
 $pmp_review_type = 0;
 
 // Activate external reviews
-//
+// 
 // Possible values:
 //    0 => No
 //    1 => Yes
-//
+// 
 $pmp_extern_reviews = 1;
 
 // Show review summary graph
-//
+// 
 // Possible values:
 //    0 => No
 //    1 => Yes
-//
+// 
 $pmp_show_brief_review = 1;
 
 // Show external links on profile page
-//
+// 
 // Possible values:
 //    0 => Auto
 //    1 => My Links
 //    2 => External Links
 //    3 => All
 //    4 => None
-//
+// 
 $pmp_show_links = 0;
 
 // Disable reviews
-//
+// 
 // Possible values:
 //    0 => No
 //    1 => Yes
-//
+// 
 $pmp_disable_reviews = 0;
 
 // Use Count As value from DVDProfiler for statistics
-//
+// 
 // Possible values:
 //    0 => No
 //    1 => Yes
-//
+// 
 $pmp_use_countas = 0;
 
 
@@ -952,6 +928,8 @@ $pmp_dir_cast = 'cast/';
 $pmp_google = 0;
 
 // Google Analytics Tracking Code
+// 
+// No support for Google Universal Analytics!
 // 
 $pmp_tracking_code = '';
 
