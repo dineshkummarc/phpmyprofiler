@@ -1,5 +1,5 @@
 <?php 
-// Generated: Mon, 02 Nov 2020 07:37:09 +0100
+// Generated: Sat, 12 Oct 2024 20:23:23 +0200
 
 
 
@@ -291,7 +291,6 @@ $pmp_thousands_sep = '.';
 //    America/Fort_Nelson => America/Fort Nelson
 //    America/Fortaleza => America/Fortaleza
 //    America/Glace_Bay => America/Glace Bay
-//    America/Godthab => America/Godthab
 //    America/Goose_Bay => America/Goose Bay
 //    America/Grand_Turk => America/Grand Turk
 //    America/Grenada => America/Grenada
@@ -335,6 +334,7 @@ $pmp_thousands_sep = '.';
 //    America/Nome => America/Nome
 //    America/Noronha => America/Noronha
 //    America/North_Dakota => America/North Dakota
+//    America/Nuuk => America/Nuuk
 //    America/Ojinaga => America/Ojinaga
 //    America/Panama => America/Panama
 //    America/Pangnirtung => America/Pangnirtung
@@ -445,6 +445,7 @@ $pmp_thousands_sep = '.';
 //    Asia/Pontianak => Asia/Pontianak
 //    Asia/Pyongyang => Asia/Pyongyang
 //    Asia/Qatar => Asia/Qatar
+//    Asia/Qostanay => Asia/Qostanay
 //    Asia/Qyzylorda => Asia/Qyzylorda
 //    Asia/Riyadh => Asia/Riyadh
 //    Asia/Sakhalin => Asia/Sakhalin
@@ -482,7 +483,6 @@ $pmp_thousands_sep = '.';
 //    Australia/Adelaide => Australia/Adelaide
 //    Australia/Brisbane => Australia/Brisbane
 //    Australia/Broken_Hill => Australia/Broken Hill
-//    Australia/Currie => Australia/Currie
 //    Australia/Darwin => Australia/Darwin
 //    Australia/Eucla => Australia/Eucla
 //    Australia/Hobart => Australia/Hobart
@@ -569,7 +569,6 @@ $pmp_thousands_sep = '.';
 //    Pacific/Chuuk => Pacific/Chuuk
 //    Pacific/Easter => Pacific/Easter
 //    Pacific/Efate => Pacific/Efate
-//    Pacific/Enderbury => Pacific/Enderbury
 //    Pacific/Fakaofo => Pacific/Fakaofo
 //    Pacific/Fiji => Pacific/Fiji
 //    Pacific/Funafuti => Pacific/Funafuti
@@ -578,6 +577,7 @@ $pmp_thousands_sep = '.';
 //    Pacific/Guadalcanal => Pacific/Guadalcanal
 //    Pacific/Guam => Pacific/Guam
 //    Pacific/Honolulu => Pacific/Honolulu
+//    Pacific/Kanton => Pacific/Kanton
 //    Pacific/Kiritimati => Pacific/Kiritimati
 //    Pacific/Kosrae => Pacific/Kosrae
 //    Pacific/Kwajalein => Pacific/Kwajalein

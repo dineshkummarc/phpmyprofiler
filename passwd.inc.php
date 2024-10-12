@@ -1,8 +1,8 @@
 <?php
 // Configuration File of Administration
-// Generated: Mon, 02 Nov 2020 07:38:06 +0100
+// Generated: Sat, 12 Oct 2024 20:25:03 +0200
 
 $pmp_admin = 'admin';
-$pmp_passwd = '$2y$10$Y4.TLLm/D.nFT95LELefpOE8wci6sq7mJ7Elpjwl/GPXwbQ0e5Mca';
+$pmp_passwd = '$2y$10$jUABu/5zm/OwzQy1a9A24OzM46MAQvfw1mS9Sy6tEFqzKwVNtabqK';
 
 ?>
